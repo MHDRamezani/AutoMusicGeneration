@@ -28,7 +28,7 @@ num_hidden = 512
 x_length = 100
 y_length = 10
 batch_size = 64
-num_epochs = 100
+num_epochs = 50
 
 
 def buildModel():

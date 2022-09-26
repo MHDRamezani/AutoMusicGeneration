@@ -183,8 +183,8 @@ def outputMidi(output_dir, piano_roll, tempo=120, resolution=480, scale=1, veloc
     last_state = np.zeros(pitch_dimension)
     last_index = 0
 
-    for current_index, current_state in enumerate(
-            np.concatenate((piano_roll, last_state.reshape(1, -1)), axis=0)):  # terminate note at the end
+    for current_index, current_state in enumerate(np.concatenate((piano_roll,
+                                                                  last_state.reshape(1, -1)), axis=0)):  # terminate note at the end
 
         delta = current_state - last_state
         last_state = current_state
